@@ -30,7 +30,7 @@ const STORE_CASES: CaseItem[] = [
     description: "A successful businessman found dead in his study. No forced entry. Just a voicemail and a lot of questions.",
     price: 1199,
     originalPrice: 1501,
-    shippingFee: 0,
+    shippingFee: 80,
     stars: 5,
     duration: "2–3 HOURS",
     difficulty: "HARD",
@@ -490,7 +490,7 @@ export function HomeStoreSection() {
                             )}
                           </div>
                           <span className="font-mono text-[8px] text-white/40 uppercase tracking-wider mt-0.5">
-                            {shipFee === 0 ? "Free Delivery" : `+₹${shipFee} Shipping`}
+                            {shipFee === 0 ? "Free Delivery" : `+₹${shipFee} Delivery Charge`}
                           </span>
                         </div>
 

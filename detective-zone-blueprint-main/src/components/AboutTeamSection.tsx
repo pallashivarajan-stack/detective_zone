@@ -13,11 +13,6 @@ const TEAM_MEDIA = [
     caption: "Real-world forensic markers, crime scene diagrams, and physical evidence"
   },
   {
-    url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/team/4.jpeg",
-    alt: "Official case kit evidence files and dossiers",
-    caption: "Handcrafted physical case kits, classified files, and evidence dossiers"
-  },
-  {
     url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/team/6.jpeg",
     alt: "Investigative debrief and breakthrough deduction",
     caption: "Interactive case debrief, suspect interrogation, and forensic deduction"
@@ -266,7 +261,7 @@ export function AboutTeamSection() {
           </div>
 
           {/* Thumbnails Row */}
-          <div className="grid grid-cols-5 gap-2 sm:gap-3">
+          <div className="grid grid-cols-4 gap-2 sm:gap-3">
             {TEAM_MEDIA.map((item, index) => {
               const isActive = index === activeIndex;
               return (

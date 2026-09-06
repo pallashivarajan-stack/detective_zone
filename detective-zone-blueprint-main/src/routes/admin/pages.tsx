@@ -44,25 +44,25 @@ interface InvestigationModuleItem {
 }
 
 export const PRESET_MODULE_ICONS = [
-  { label: "Crime Scene Clapper", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/crime-scene-clapper.png" },
-  { label: "Autopsy Report", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/autopsy-report-icon.png" },
-  { label: "Witness Statements", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/witness-statements-icon.png" },
-  { label: "Digital Evidence", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/digital-evidence-icon.png" },
-  { label: "Documents", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/documents-icon.png" },
-  { label: "Evidence Photos", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/evidence-photos-icon.png" },
-  { label: "Investigative Tools", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/investigative-tools-icon.png" },
-  { label: "Detective Notes", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/detective-notes-icon.png" },
+  { label: "Crime Scene", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/crime_scene.jpeg" },
+  { label: "Autopsy Report", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/autospy.jpeg" },
+  { label: "Witness Statements", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/witness.jpeg" },
+  { label: "Digital Evidence", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/digital+evidence.jpeg" },
+  { label: "Documents", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/documents.jpeg" },
+  { label: "Evidence Photos", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/evidence.jpeg" },
+  { label: "Investigative Tools", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/tools.jpeg" },
+  { label: "Detective Notes", url: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/detective_notes.jpeg" },
 ];
 
 const DEFAULT_8_MODULES: InvestigationModuleItem[] = [
-  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/crime-scene-clapper.png", heading: "Crime Scene", body: "We provide a secure Drive link inside the kit containing full crime scene video files and authentic audio recordings to explore the scene.", pct: 75 },
-  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/autopsy-report-icon.png", heading: "Autopsy Report", body: "We provide official sealed coroner reports, toxicological blood panels, and trauma anatomical diagrams to establish time and cause of death.", pct: 60 },
-  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/witness-statements-icon.png", heading: "Witness Statements", body: "We provide verbatim police interrogation transcripts, signed eyewitness affidavits, and suspect alibi logs to detect lies and contradictions.", pct: 45 },
-  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/digital-evidence-icon.png", heading: "Digital Evidence", body: "We provide extracted suspect phone records, encrypted chat histories, cell tower triangulation logs, and surveillance CCTV footage.", pct: 30 },
-  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/documents-icon.png", heading: "Documents", body: "We provide confidential forensic dossier files, authentic bank statements, search warrants, and original handwritten correspondence.", pct: 40 },
-  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/evidence-photos-icon.png", heading: "Evidence Photos", body: "We provide high-resolution glossy crime scene polaroids, macro fingerprint lifts, ballistics captures, and suspect surveillance photographs.", pct: 50 },
-  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/investigative-tools-icon.png", heading: "Tools Given", body: "We provide authentic physical investigative tools including optical inspection magnifiers, fingerprint cards, and forensic loupes inside the kit.", pct: 35 },
-  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/detective-notes-icon.png", heading: "Detective Notes", body: "We provide official investigator casebook worksheets, suspect motive matrices, and step-by-step procedural deduction logs to crack the case.", pct: 20 },
+  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/crime_scene.jpeg", heading: "Crime Scene", body: "We provide a secure Drive link inside the kit containing full crime scene video files and authentic audio recordings to explore the scene.", pct: 75 },
+  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/autospy.jpeg", heading: "Autopsy Report", body: "We provide official sealed coroner reports, toxicological blood panels, and trauma anatomical diagrams to establish time and cause of death.", pct: 60 },
+  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/witness.jpeg", heading: "Witness Statements", body: "We provide verbatim police interrogation transcripts, signed eyewitness affidavits, and suspect alibi logs to detect lies and contradictions.", pct: 45 },
+  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/digital+evidence.jpeg", heading: "Digital Evidence", body: "We provide extracted suspect phone records, encrypted chat histories, cell tower triangulation logs, and surveillance CCTV footage.", pct: 30 },
+  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/documents.jpeg", heading: "Documents", body: "We provide confidential forensic dossier files, authentic bank statements, search warrants, and original handwritten correspondence.", pct: 40 },
+  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/evidence.jpeg", heading: "Evidence Photos", body: "We provide high-resolution glossy crime scene polaroids, macro fingerprint lifts, ballistics captures, and suspect surveillance photographs.", pct: 50 },
+  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/tools.jpeg", heading: "Tools Given", body: "We provide authentic physical investigative tools including optical inspection magnifiers, fingerprint cards, and forensic loupes inside the kit.", pct: 35 },
+  { icon: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/detective_notes.jpeg", heading: "Detective Notes", body: "We provide official investigator casebook worksheets, suspect motive matrices, and step-by-step procedural deduction logs to crack the case.", pct: 20 },
 ];
 
 function isRealImageUrl(url: any): boolean {

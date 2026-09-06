@@ -55,7 +55,7 @@ const initialCases = [
     rating: 5,
     price: 1199,
     originalPrice: 1501,
-    shippingFee: 0,
+    shippingFee: 80,
     dateAdded: 1690000000000,
   },
   {
@@ -387,7 +387,7 @@ function CasesDashboard() {
                                   )}
                                 </div>
                                 <span className="font-mono text-[8px] text-white/40 uppercase tracking-wider mt-0.5">
-                                  {shipFee === 0 ? "Free Delivery" : `+₹${shipFee} Shipping`}
+                                  {shipFee === 0 ? "Free Delivery" : `+₹${shipFee} Delivery Charge`}
                                 </span>
                               </div>
 

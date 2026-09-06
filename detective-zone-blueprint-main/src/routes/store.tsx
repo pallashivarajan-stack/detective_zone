@@ -886,6 +886,12 @@ function StorePage() {
                             </span>
                             <span className="text-[10px] text-[#555]">Level</span>
                           </div>
+                          <div className="flex flex-col gap-0.5">
+                            <span className="text-[#C81D24] text-[18px] font-bold tracking-normal">
+                              ₹80
+                            </span>
+                            <span className="text-[10px] text-[#555]">Delivery Charge</span>
+                          </div>
                         </div>
 
                         {/* Price */}
@@ -895,7 +901,7 @@ function StorePage() {
                           </span>
                         </div>
                         <p className="mt-1 font-mono text-[10px] tracking-[0.2em] text-[#555] uppercase">
-                          Free Shipping & Taxes Included
+                          +₹80 Delivery Charge • Taxes Included
                         </p>
 
                         {/* CTA */}

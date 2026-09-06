@@ -86,6 +86,7 @@ def master_seed():
                 "estimated_duration": "3–5 HOURS",
                 "rating": 5.0,
                 "short_description": "A successful businessman found dead in his study. No forced entry. Just a voicemail and a lot of questions.",
+                "shipping_fee": 80.0,
                 "featured": True,
                 "is_published": True,
                 "display_order": 1,
@@ -208,7 +209,7 @@ def master_seed():
         
         page_contents_master = {
             "001": {
-                "hero_video_url": s3_video,
+                "hero_video_url": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/Untitled+design+(6).mp4",
                 "hero_subtitle": "A successful businessman found dead in his study. No forced entry. No clear motive. Just a voicemail… and a lot of questions.",
                 "hero_badge_text": "Case File 001",
                 "evidence_wall_bg_url": s3_corkboard,
@@ -226,14 +227,14 @@ def master_seed():
                     {"id": "report", "x": 80, "y": 68, "label": "Forensic Report", "note": "Traces of digitalis found in the whiskey glass.", "image_url": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/evidence/e-06.jpg", "links": []}
                 ],
                 "investigation_modules": [
-                    {"icon": "PersonStanding", "heading": "Crime Scene", "body": "We provide a secure Drive link inside the kit containing full crime scene video files and authentic audio recordings to explore the scene.", "pct": 75},
-                    {"icon": "FileText", "heading": "Autopsy Report", "body": "We provide official sealed coroner reports, toxicological blood panels, and trauma anatomical diagrams to establish time and cause of death.", "pct": 60},
-                    {"icon": "MessagesSquare", "heading": "Witness Statements", "body": "We provide verbatim police interrogation transcripts, signed eyewitness affidavits, and suspect alibi logs to detect lies and contradictions.", "pct": 45},
-                    {"icon": "Monitor", "heading": "Digital Evidence", "body": "We provide extracted suspect phone records, encrypted chat histories, cell tower triangulation logs, and surveillance CCTV footage.", "pct": 30},
-                    {"icon": "Folder", "heading": "Documents", "body": "We provide confidential forensic dossier files, authentic bank statements, search warrants, and original handwritten correspondence.", "pct": 40},
-                    {"icon": "Camera", "heading": "Evidence Photos", "body": "We provide high-resolution glossy crime scene polaroids, macro fingerprint lifts, ballistics captures, and suspect surveillance photographs.", "pct": 50},
-                    {"icon": "Wrench", "heading": "Tools Given", "body": "We provide authentic physical investigative tools including optical inspection magnifiers, fingerprint cards, and forensic loupes inside the kit.", "pct": 35},
-                    {"icon": "Notebook", "heading": "Detective Notes", "body": "We provide official investigator casebook worksheets, suspect motive matrices, and step-by-step procedural deduction logs to crack the case.", "pct": 20}
+                    {"icon": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/crime_scene.jpeg", "heading": "Crime Scene", "body": "We provide a secure Drive link inside the kit containing full crime scene video files and authentic audio recordings to explore the scene.", "pct": 75},
+                    {"icon": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/autospy.jpeg", "heading": "Autopsy Report", "body": "We provide official sealed coroner reports, toxicological blood panels, and trauma anatomical diagrams to establish time and cause of death.", "pct": 60},
+                    {"icon": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/witness.jpeg", "heading": "Witness Statements", "body": "We provide verbatim police interrogation transcripts, signed eyewitness affidavits, and suspect alibi logs to detect lies and contradictions.", "pct": 45},
+                    {"icon": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/digital+evidence.jpeg", "heading": "Digital Evidence", "body": "We provide extracted suspect phone records, encrypted chat histories, cell tower triangulation logs, and surveillance CCTV footage.", "pct": 30},
+                    {"icon": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/documents.jpeg", "heading": "Documents", "body": "We provide confidential forensic dossier files, authentic bank statements, search warrants, and original handwritten correspondence.", "pct": 40},
+                    {"icon": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/evidence.jpeg", "heading": "Evidence Photos", "body": "We provide high-resolution glossy crime scene polaroids, macro fingerprint lifts, ballistics captures, and suspect surveillance photographs.", "pct": 50},
+                    {"icon": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/tools.jpeg", "heading": "Tools Given", "body": "We provide authentic physical investigative tools including optical inspection magnifiers, fingerprint cards, and forensic loupes inside the kit.", "pct": 35},
+                    {"icon": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/icons/detective_notes.jpeg", "heading": "Detective Notes", "body": "We provide official investigator casebook worksheets, suspect motive matrices, and step-by-step procedural deduction logs to crack the case.", "pct": 20}
                 ]
             },
             "002": {
@@ -419,7 +420,7 @@ def master_seed():
                 "name": "The Last Voicemail — Hybrid Case Kit",
                 "kit_code": "KIT-001",
                 "slug": "last-voicemail-kit",
-                "cover_image": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/case_kits/image.png",
+                "cover_image": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/case_kits/WhatsApp+Image+2026-09-05+at+10.21.59+PM.jpeg",
                 "price": 999.00,
                 "sale_price": 899.00,
                 "difficulty": "HARD",
@@ -627,7 +628,7 @@ def master_seed():
             {"label": "Encrypted Mobile Device", "image_url": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/signature/mobile.png", "description": "Recovered burner phone with encrypted SMS records.", "authenticity_note": "Hardware Seizure Proof"},
             {"label": "Cipher Puzzle Disc", "image_url": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/signature/puzzle.png", "description": "Rotating brass cipher tool used to decrypt victim's diary.", "authenticity_note": "Mechanical Code Tool"},
             {"label": "Stopped Pocket Watch", "image_url": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/signature/time.png", "description": "Forensic proof of exact timestamp of study breach.", "authenticity_note": "Impact Timestamp Clue"},
-            {"label": "Master Evidence Case Box", "image_url": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/case_kits/image.png", "description": "Custom rigid evidence locker with seal integrity stickers.", "authenticity_note": "Numbered Edition #047"}
+            {"label": "Master Evidence Case Box", "image_url": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/case_kits/WhatsApp+Image+2026-09-05+at+10.21.59+PM.jpeg", "description": "Custom rigid evidence locker with seal integrity stickers.", "authenticity_note": "Numbered Edition #047"}
         ]
         for s in sig_data:
             existing_s = db.query(SignatureEvidence).filter(SignatureEvidence.label == s["label"]).first()
@@ -792,7 +793,7 @@ def master_seed():
             "featured_kit_title": "The Last Voicemail",
             "featured_kit_code": "DZ-001",
             "featured_kit_price": "999",
-            "featured_kit_image": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/case_kits/image.png",
+            "featured_kit_image": "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/case_kits/WhatsApp+Image+2026-09-05+at+10.21.59+PM.jpeg",
             "featured_kit_quote": '"A sealed case. A missing voice. Thirty pieces of evidence standing between you and the truth."',
             "featured_kit_duration": "3–4",
             "featured_kit_level": "Expert",

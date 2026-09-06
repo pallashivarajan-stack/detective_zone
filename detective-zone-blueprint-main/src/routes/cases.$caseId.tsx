@@ -83,7 +83,7 @@ const caseFiles: Record<string, CaseFile> = {
     location: "Varma Residence",
     price: 1199,
     originalPrice: 1501,
-    shippingFee: 0,
+    shippingFee: 80,
     pins: [
       {
         id: "vm",
@@ -488,7 +488,12 @@ function CaseDetailPage() {
   ];
 
   // Dynamic Video: CMS configured URL or default video for 001
-  const activeHeroVideo = pageData?.hero_video_url || (file.id === "001" ? case001Video : undefined);
+  const activeHeroVideo =
+    file.id === "001"
+      ? (pageData?.hero_video_url && !pageData.hero_video_url.includes("detective-scrub-fast")
+          ? pageData.hero_video_url
+          : case001Video)
+      : (pageData?.hero_video_url || undefined);
 
   // Dynamic modules mapping
   const activeModules = pageData?.investigation_modules && pageData.investigation_modules.length > 0
@@ -593,7 +598,9 @@ function CaseDetailPage() {
                     <div className="flex items-center gap-2 rounded border border-white/5 bg-[#0a0a0a] px-3 py-2">
                       <Truck className="h-3.5 w-3.5 text-[#D32F2F] shrink-0" />
                       <div>
-                        <p className="font-mono text-[9.5px] font-semibold text-white uppercase tracking-wider">Free Delivery</p>
+                        <p className="font-mono text-[9.5px] font-semibold text-white uppercase tracking-wider">
+                          {file.shippingFee && file.shippingFee > 0 ? `₹${file.shippingFee} Delivery Charge` : "Free Delivery"}
+                        </p>
                         <p className="font-mono text-[8px] text-neutral-400">Pan-India (3–5 Days)</p>
                       </div>
                     </div>

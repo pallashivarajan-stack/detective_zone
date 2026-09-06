@@ -46,7 +46,7 @@ function AdminKits() {
     price: "999",
     duration: "3–4",
     level: "Expert",
-    image: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/case_kits/image.png",
+    image: dz001Kit,
   });
 
   // Signature Evidence Clue Form
@@ -88,7 +88,7 @@ function AdminKits() {
           price: cleanPrice || "1199",
           duration: settingsData.featured_kit_duration || "2–3",
           level: settingsData.featured_kit_level || "Expert",
-          image: settingsData.featured_kit_image || "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/case_kits/image.png",
+          image: settingsData.featured_kit_image || dz001Kit,
         });
       }
     } catch (err: any) {

@@ -946,8 +946,8 @@ function Home() {
                     <span className="text-[10px] text-[#555]">Difficulty</span>
                   </div>
                   <div className="flex flex-col gap-0.5">
-                    <span className="text-[#4ade80] text-[18px] font-bold">Free</span>
-                    <span className="text-[10px] text-[#555]">Delivery</span>
+                    <span className="text-[#C81D24] text-[18px] font-bold">₹80</span>
+                    <span className="text-[10px] text-[#555]">Delivery Charge</span>
                   </div>
                 </div>
 
