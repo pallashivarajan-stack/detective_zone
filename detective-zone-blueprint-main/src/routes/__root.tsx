@@ -9,9 +9,10 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import { trackPixelPageView } from "../lib/meta-pixel";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { RainProvider } from "../components/RainProvider";
 import { Navbar } from "../components/Navbar";
@@ -108,7 +109,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "preload", href: "https://api.detectiveszone.com/uploads/hero/df33b893238b_detective-poster.webp", as: "image", type: "image/webp" },
-      { rel: "preload", href: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/detective-scrub-fast.mp4", as: "video", type: "video/mp4" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -136,6 +136,31 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        {/* Meta Pixel Code */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2533539463718226');
+fbq('track', 'PageView');`,
+          }}
+        />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=2533539463718226&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
+        {/* End Meta Pixel Code */}
       </head>
       <body>
         {children}
@@ -149,8 +174,19 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const routerState = useRouterState();
   const pathname = routerState.location.pathname;
+  const currentPath = pathname + (routerState.location.searchStr || "");
   const isAdminRoute = pathname.startsWith("/admin");
   const showWhatsAppButton = !isAdminRoute;
+
+  // Track Meta Pixel PageView on client-side route changes without duplicate firing on initial load
+  const prevPathRef = useRef(currentPath);
+  useEffect(() => {
+    // Only fire on client-side navigation when the path actually changes
+    if (prevPathRef.current !== currentPath) {
+      prevPathRef.current = currentPath;
+      trackPixelPageView();
+    }
+  }, [currentPath]);
 
   return (
     <QueryClientProvider client={queryClient}>

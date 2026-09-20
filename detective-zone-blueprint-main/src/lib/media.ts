@@ -7,8 +7,9 @@
 
 export const S3_MEDIA = {
   // Hero section video and poster:
-  // Primary: High-speed cloud CDN on AWS S3 + backend upload fallback
-  heroVideo: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/detective-scrub-fast.mp4",
+  // Primary: Local asset for instant loading, zero CORS issues, and smooth scrubbing + CDN fallbacks
+  heroVideo: "/detective-scrub-fast.mp4",
+  heroVideoRemote: "https://detectives-zone-media.s3.eu-north-1.amazonaws.com/detective-scrub-fast.mp4",
   heroVideoFallback: "https://api.detectiveszone.com/uploads/hero/52ed80bc1a4b_detective-scrub-fast.mp4",
   heroVideoLocal: "/detective-scrub-fast.mp4",
   heroPoster: "https://api.detectiveszone.com/uploads/hero/df33b893238b_detective-poster.webp",

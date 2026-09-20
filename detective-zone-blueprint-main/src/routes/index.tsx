@@ -476,7 +476,8 @@ function Home() {
   const activeHeroVideo = useMemo(() => {
     if (
       cmsSettings.hero_video_url &&
-      !cmsSettings.hero_video_url.includes("Untitled+design")
+      !cmsSettings.hero_video_url.includes("Untitled+design") &&
+      !cmsSettings.hero_video_url.includes("detective-scrub-fast")
     ) {
       return cmsSettings.hero_video_url;
     }
@@ -548,7 +549,10 @@ function Home() {
     // Once buffered in RAM, seeking is 100% instant (<1ms) with zero network latency!
     const prebufferVideo = async () => {
       try {
-        const res = await fetch(activeHeroVideo, { mode: "cors" });
+        const videoToFetch = activeHeroVideo.startsWith("http")
+          ? (S3_MEDIA.heroVideoLocal || activeHeroVideo)
+          : activeHeroVideo;
+        const res = await fetch(videoToFetch);
         if (!res.ok) return;
         const blob = await res.blob();
         if (isCancelled || !video) return;
@@ -768,8 +772,8 @@ function Home() {
           aria-hidden="true"
           onError={() => {
             const video = videoRef.current;
-            if (video && video.src !== S3_MEDIA.heroVideoFallback) {
-              video.src = S3_MEDIA.heroVideoFallback;
+            if (video && video.src !== S3_MEDIA.heroVideoLocal && video.src !== S3_MEDIA.heroVideoFallback) {
+              video.src = S3_MEDIA.heroVideoLocal;
               video.load();
               video.play().catch(() => {});
             }
@@ -777,6 +781,7 @@ function Home() {
           className="absolute inset-0 m-auto h-full w-full min-w-full min-h-full pointer-events-none z-0 object-cover object-[70%_25%] sm:object-[75%_25%] md:object-[80%_20%] lg:min-w-0 lg:min-h-0 lg:object-contain lg:scale-[1.08] lg:translate-x-[7%] lg:-translate-y-[2%]"
         >
           <source src={activeHeroVideo} type="video/mp4" />
+          <source src={S3_MEDIA.heroVideoLocal} type="video/mp4" />
           <source src={S3_MEDIA.heroVideoFallback} type="video/mp4" />
         </video>
 
